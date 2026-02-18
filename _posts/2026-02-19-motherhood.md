@@ -1,16 +1,17 @@
 ---
 title: "Motherhood"
 layout: post
-date: 2026-02-18 19:50
+date: 2026-02-18 19:50:00 +0100
 image: /assets/images/twp.jpg
 headerImage: true
 tag:
-- personal
+  - personal
 star: false
 category: blog
 author: Gina Marano
 description: Blogpost
 ---
+
 
 ## News: Motherhood is great, however...
 
