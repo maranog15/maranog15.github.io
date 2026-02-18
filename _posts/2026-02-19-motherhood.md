@@ -5,7 +5,7 @@ date: 2026-02-18 19:50
 image: /assets/images/twp.jpg
 headerImage: true
 tag:
-- motherhood
+- personal
 star: true
 category: blog
 author: Gina Marano
