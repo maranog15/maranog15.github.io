@@ -43,10 +43,9 @@ The system is, frankly, insane. It effectively forces mothers to reduce their wo
 In Switzerland you get about four months of maternity leave. Then: back to work. Fine. But who looks after the baby?
 
 Realistically, there are three options:
-You stay home (financially unrealistic for years), you hire a nanny (very expensive but individualized care), or you use a Kita.
+You stay home (financially unrealistic for years), you hire a nanny (very expensive, i.e.  up to 40 CHF net per hour, but individualized care), or you embrace the Kita-system.
 
-Kitas can cost up to 40 CHF net per hour. But cost is only one side. In many cases, you place your baby in a group with ten or more children, supervised by at most two caregivers. That means a four-month-old with virtually no immune defenses is mixed with toddlers up to three years old. If lucky, someone holds them for ten minutes. Otherwise they spend long stretches in a bouncy chair while older kids run, kick, or bump into them. Yes—I have seen this.
-
+Kitas, or better known as "we put you on the waiting list" aka "you should have booked a place for your child once you knew you were pregnant". No joking. How does that work: you place your baby in a group with ten or more children, supervised by at most two caregivers. That means a four-month-old with virtually no immune defenses is mixed with toddlers up to three years old. If lucky, someone holds them for ten minutes. Otherwise they spend long stretches in a bouncy chair while older kids run, kick, or bump into them. Yes—I have seen this.
 I could say more, but I don’t want to write in anger.
 
 If this is the system we’re supposed to accept, we should at least question it before committing to it. I chose differently because I was fortunate enough to afford a nanny. I know how lucky that makes me. Many friends had to choose family over career and now hope to re-enter a hyper-competitive job market years later.
@@ -59,8 +58,8 @@ These are fragments, pieces—but together they summarize what I’ve seen.
 Apart from one colleague who misinformed me about the risks of defending my PhD after giving birth (I’ll refrain from commenting further—some people simply shouldn’t hold positions in academia), I received extraordinary support.
 
 1. My PhD supervisor, whom I want to thank out loud: THANK YOU HARALD BUGMANN.
-2. My colleagues at ETH.
-3. My current postdoc team—THANK YOU Resource Analysis at WSL.
+2. My colleagues at ETH, in particular Olalla who is an incredible mother and incredible scientist.
+3. My current postdoc team (THANK YOU Resource Analysis at WSL!).
 
 I was lucky to find an academic village that truly cares about my wellbeing and my son’s.
 
