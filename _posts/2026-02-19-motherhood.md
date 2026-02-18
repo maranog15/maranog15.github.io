@@ -6,7 +6,7 @@ image: /assets/images/twp.jpg
 headerImage: true
 tag:
 - personal
-star: true
+star: false
 category: blog
 author: Gina Marano
 description: Blogpost
