@@ -1,0 +1,171 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{fontspec}
+\usepackage[margin=2.0cm,top=1.8cm,bottom=2.0cm]{geometry}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+\usepackage{etoolbox}
+
+\definecolor{ink}{HTML}{1B211E}
+\definecolor{inksoft}{HTML}{3C4642}
+\definecolor{muted}{HTML}{6E7A75}
+\definecolor{accent}{HTML}{2F6B4F}
+\definecolor{rule}{HTML}{D8DEDA}
+
+\setmainfont{Lato}[Color=1B211E]
+\newfontfamily\serifhead{TeX Gyre Pagella}[Ligatures=TeX]
+\linespread{1.06}
+\setlength{\parindent}{0pt}
+\color{ink}
+
+\hypersetup{colorlinks=true,urlcolor=accent,linkcolor=accent}
+
+\titleformat{\section}{\serifhead\bfseries\large\color{ink}}{}{0pt}{}[\vspace{-6pt}{\color{rule}\rule{\linewidth}{0.5pt}}]
+\titlespacing{\section}{0pt}{14pt}{6pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\footnotesize\color{muted}Gina Marano \textperiodcentered\ Curriculum Vitae}
+\fancyfoot[R]{\footnotesize\color{muted}\thepage}
+
+% two-column entry: {when}{title}{where}{notes}
+\newlength{\lcol}\setlength{\lcol}{2.55cm}
+\newcommand{\entry}[4]{%
+  \noindent\begin{minipage}[t]{\lcol}\raggedright\vspace*{2pt}\footnotesize\bfseries\color{muted}#1\end{minipage}%
+  \hspace{0.45cm}%
+  \begin{minipage}[t]{\dimexpr\linewidth-\lcol-0.45cm\relax}\raggedright
+    {\serifhead\bfseries #2}%
+    \notblank{#3}{\par\vspace{1.5pt}{\footnotesize\color{muted}#3}}{}%
+    \notblank{#4}{\par\vspace{2.5pt}{\small\color{inksoft}#4}}{}%
+  \end{minipage}\par\vspace{7pt}}
+
+% definition row: {key}{value}
+\newlength{\dcol}\setlength{\dcol}{3.5cm}
+\newcommand{\defrow}[2]{%
+  \noindent\begin{minipage}[t]{\dcol}\raggedright\footnotesize\bfseries\color{muted}#1\end{minipage}%
+  \hspace{0.45cm}%
+  \begin{minipage}[t]{\dimexpr\linewidth-\dcol-0.45cm\relax}\raggedright\small\color{inksoft}#2\end{minipage}\par\vspace{5pt}}
+
+\newcommand{\pubitem}[3]{%
+  \noindent\begin{minipage}[t]{0.6cm}\raggedright\footnotesize\color{muted}#1\end{minipage}%
+  \begin{minipage}[t]{\dimexpr\linewidth-0.6cm\relax}\raggedright\small #2\ {\color{inksoft}#3}\end{minipage}\par\vspace{4pt}}
+
+\newcommand{\me}{\textbf{Marano, G.}}
+
+\begin{document}
+
+{\serifhead\bfseries\fontsize{24}{27}\selectfont Gina Marano}\\[3pt]
+{\normalsize\color{inksoft}Forest ecologist \& forest modeller}\\[2pt]
+{\small\color{muted}Postdoctoral researcher, Swiss Federal Institute for Forest, Snow and Landscape Research WSL\\
+Lecturer, ETH Zurich, D-USYS}\\[5pt]
+{\footnotesize\color{muted}Z\"urcherstrasse 111, 8903 Birmensdorf, Switzerland \textperiodcentered\ \href{mailto:gina.marano@wsl.ch}{gina.marano@wsl.ch} \textperiodcentered\ \href{https://ginamarano.com}{ginamarano.com}\\
+\href{https://orcid.org/0000-0003-2600-984X}{ORCID 0000-0003-2600-984X} \textperiodcentered\ \href{https://scholar.google.com/citations?user=OOLvF6kAAAAJ}{Google Scholar} \textperiodcentered\ \href{https://www.researchgate.net/profile/Gina-Marano}{ResearchGate} \textperiodcentered\ \href{https://www.linkedin.com/in/gina-marano-60a66270/}{LinkedIn}}
+
+\vspace{6pt}
+{\color{rule}\rule{\linewidth}{0.8pt}}
+\vspace{4pt}
+
+\section*{Research interests}
+{\small\color{inksoft}Assessing the impacts of abiotic disturbances --- mainly drought and climate extremes --- and biotic disturbances --- pests and management --- on the dynamics of temperate forests, with a focus on growth and mortality processes at the stand and individual-tree scale. My work combines process-based and empirical forest models with long-term observational datasets, and pays close attention to the practical value of model output for forest practitioners.}
+
+\section*{Positions}
+\entry{2025 -- present}{Postdoctoral Researcher \textnormal{\footnotesize(100\%)}}{Swiss Federal Institute for Forest, Snow and Landscape Research WSL, Birmensdorf, Switzerland}{Research Unit Forest Resources and Management --- Resource Analysis group, Swiss National Forest Inventory. Project \textbf{ReForMASSIMO}: improving the modelling of Swiss forest development under relevant climate scenarios with the MASSIMO model. Supervisors: Dr.~Golo Stadelmann, Dr.~Esther Th\"urig.}
+\entry{2026 -- present}{University Lecturer \textnormal{\footnotesize(33\%)}}{ETH Zurich, Department of Environmental Systems Science (D-USYS), Switzerland}{Master course \emph{Quantitative Vegetation Dynamics}.}
+\entry{2022 -- 2023}{Teaching Assistant \& Research Support \textnormal{\footnotesize(20\%)}}{ETH Zurich, D-USYS, Switzerland}{Master courses \emph{Quantitative Vegetation Dynamics} and \emph{Forest Mountain Ecology and Management}.}
+\entry{2018 -- 2020}{Research Fellow \textnormal{\footnotesize(100\%)}}{University of Naples Federico II, Italy}{Horizon 2020 project \textbf{LANDSUPPORT}. Group leader of the forestry group in WP3 (high-performance models); development of geospatial decision support tools for forest practice in the Campania Region at NUTS-2 and NUTS-3 level.}
+
+\section*{Education}
+\entry{2021 -- 2025}{PhD in Forest Ecology}{ETH Zurich, Switzerland}{Thesis: \emph{Unraveling the death spiral --- drivers and ecological responses of temperate forests to drought stress.} Supervisor: Prof.~Dr.~Harald Bugmann, Stand and Landscape Dynamics group. Funded by SNSF grant 188882, \emph{Embracing structural uncertainty in models of forest dynamics}. Developed and validated process-based forest gap models (ForClim v4.1--4.2) against long-term observational datasets; released open-source model code and reproducible workflows.}
+\entry{2015 -- 2018}{MSc Forest Sciences \textnormal{\footnotesize(110/110 cum laude)}}{University of Padua, Italy}{Thesis: \emph{Physico-chemical characterization of woody by-products for energetic purposes.}}
+\entry{2011 -- 2014}{BSc Forest Sciences \textnormal{\footnotesize(110/110 cum laude)}}{University of Naples Federico II, Italy}{Thesis: \emph{Characterization of forest soils --- a multiscale approach.}}
+\entry{2007 -- 2011}{Matura, European Classical Gymnasium \textnormal{\footnotesize(100/100)}}{Convitto Nazionale Vittorio Emanuele II, Naples, Italy}{}
+
+\section*{Grants \& projects}
+\entry{2025 -- 2028}{ReForMASSIMO}{WSL \textperiodcentered\ Federal Office for the Environment (BAFU) \textperiodcentered\ CHF 500,000 \textperiodcentered\ Role: non-PI (postdoc)}{Improving the modelling of forest development in Switzerland for relevant climate scenarios with the MASSIMO model.}
+\entry{2021 -- 2025}{Embracing structural uncertainty in models of forest dynamics}{ETH Zurich \textperiodcentered\ Swiss National Science Foundation \textperiodcentered\ CHF 959,036 \textperiodcentered\ Role: non-PI (PhD)}{SNSF Division I--III, grant 188882.}
+\entry{2018 -- 2022}{LANDSUPPORT}{University of Naples Federico II \textperiodcentered\ European Union (H2020, 774234) \textperiodcentered\ €6,999,771 total, €1,351,583 institutional \textperiodcentered\ Role: non-PI (research fellow)}{Development of an integrated web-based land decision support system for the implementation of agricultural and environmental policies. Geospatial infrastructure tools supporting sustainable forest management at EU, national and regional scale.}
+
+\section*{Teaching}
+\entry{2026 -- present}{Quantitative Vegetation Dynamics \textnormal{\footnotesize(MSc)}}{ETH Zurich, D-USYS \textperiodcentered\ University Lecturer (33\%)}{}
+\entry{2021 -- 2024}{Quantitative Vegetation Dynamics \textnormal{\footnotesize(MSc)}}{ETH Zurich, D-USYS \textperiodcentered\ Teaching assistant (20\%)}{Supporting students in setting up and interpreting simulations with the forest gap model ForClim.}
+\entry{2023 -- 2024}{\"Okologie und Management von Gebirgsw\"aldern \textnormal{\footnotesize(MSc)}}{ETH Zurich, D-USYS \textperiodcentered\ Teaching assistant (20\%)}{Also listed as \emph{Forest Mountain Ecology and Management}.}
+
+\section*{Supervision of theses}
+\defrow{Master}{2024: Livia Gysel (ETH Zurich) --- modelling support; main supervisor Dr.~Mathieu Levesque. \newline 2023: Francesca Eccher (Free University of Bolzano) --- modelling support; main supervisor Dr.~Marco Mina, Eurac Research. \newline 2022--2023: Laurin Hillebrand (University of Innsbruck) --- modelling support; main supervisor Dr.~Marco Mina. \newline 2021: Alessandro Aquino (University of Naples Federico II) --- co-supervisor; main supervisor Prof.~Fabio Terribile.}
+\defrow{Bachelor}{2024: Raphael Schmid (ETH Zurich) --- co-supervisor; main supervisor Prof.~Dr.~Harald Bugmann. \newline 2023: Lara W\"uthrich (ETH Zurich) --- modelling support; main supervisor Prof.~Dr.~Harald Bugmann. \newline 2022: Samuel Zweifel (ETH Zurich) --- modelling support; main supervisor Dr.~Ulrike Hiltner.}
+
+\section*{Editorial \& review service}
+\defrow{Editorial boards}{Editorial board member, \emph{Current Climate Change Reports} (Springer). Guest Assistant Editor, \emph{Forests} --- Special Issue \emph{Modeling Forest Response to Climate Change}.}
+\defrow{Peer review}{Nature Communications, New Phytologist (Tansley Review), Global Change Biology, Journal of Ecology, Geoscientific Model Development, Biogeosciences, Ecological Modelling, Scientific Reports, European Journal of Soil Science, Discover Sustainability, Discover Forests.}
+\defrow{Institutions}{Reviewer for the National Science Centre, Poland.}
+
+\section*{Professional affiliations}
+\defrow{2026 -- present}{\textbf{British Ecological Society}, Forest Ecology Group --- Scientific Advisor.}
+\defrow{2026 -- present}{\textbf{International Tree Mortality Network} --- Core team member, contributing expertise on dynamic vegetation forest models.}
+\defrow{2020 -- present}{\textbf{SISEF}, Italian Society of Silviculture and Forest Ecology --- Communication Officer of the Modelling Working Group.}
+\defrow{2018 -- present}{\textbf{CNR Forest Modelling Lab} --- external research associate.}
+
+\section*{Forest models --- contributions}
+\defrow{MASSIMO \textnormal{(Java)}}{Empirical, stochastic, individual-tree simulator of the Swiss National Forest Inventory. Enhancing climate sensitivity via a climate meta-model; hybridisation with process-based approaches.}
+\defrow{ForClim v4.1--4.2 \textnormal{(C\#, Python)}}{Gap model of forest dynamics. Main developer of versions 4.1 and 4.2, extending sensitivity to climate extremes. Ongoing collaborations with ETH Zurich, University of Auckland and Universidad Santiago de Chile. Open source.}
+\defrow{3D-CMCC-FEM \textnormal{(C)}}{Process-based forest ecosystem model. Contributor as external research associate at the CNR Forest Modelling Lab; transferring the drought-mortality framework and linking predisposition to non-structural carbohydrate dynamics. Open source.}
+\defrow{Forest Studio \textnormal{(Rust)}}{Forest growth and management model. Scientific support to development at the ETH Zurich Forest Resources Management professorship. Open source.}
+
+\section*{Selected talks}
+\entry{2025}{Modellierung zuk\"unftiger Baumarteneignung: Herausforderungen und stetige Weiterentwicklungen \textnormal{\footnotesize(invited)}}{Montagskolloquium f\"ur die Praxis, ETH Z\"urich, 24 November 2025}{}
+\entry{2024}{Predisposing and inciting stress factors leading to drought-induced mortality \textnormal{\footnotesize(invited)}}{IUFRO World Congress, session T5.22, Stockholm, June 2024}{}
+\entry{2023}{Predisposing and inciting stress factors leading to drought-induced tree mortality \textnormal{\footnotesize(best oral presentation)}}{SwissForestLab Science Day, ETH Zurich, October 2023}{}
+\entry{2023}{From dynamic forest models to decision support for forest transformation --- how can synergies be achieved? \textnormal{\footnotesize(session chair)}}{European Conference of Ecological Modelling, Leipzig, September 2023}{Also presented \emph{Predisposing and inciting stress factors leading to beech mortality in Switzerland} and a poster on dynamic forest models as decision support in Swiss mountain protection forests.}
+\entry{2022}{Effects of drought on Swiss forest dynamics --- what is the influence of soil water storage capacity?}{Forest Disturbances and Ecosystem Dynamics in a Changing World, Berchtesgaden National Park, Germany, September 2022}{}
+\entry{2022}{Analyzing the drought--growth relationship at six low-elevation beech sites in Switzerland}{XIII Congresso Nazionale SISEF, Orvieto, Italy, May--June 2022}{}
+\entry{2021}{How to integrate dynamic forest models in geospatial decision support systems}{LANDSUPPORT H2020 Round Table on Forestry}{}
+
+\section*{Publications --- peer-reviewed}
+{\footnotesize\color{muted}Bold indicates own name. $\dagger$ first or co-first author; $\ast$ corresponding author.}\\[5pt]
+\pubitem{1}{\me$^{\dagger\ast}$, Hiltner, U., Meusburger, K., Hands, T.O., Bugmann, H.}{Predicting drought-induced tree mortality in Swiss beech forests. \emph{Ecosphere}, in press, 2026. doi:10.64898/2025.12.15.694299}
+\pubitem{2}{\me$^{\dagger}$, Costa, M., Bugmann, H., Griess, V.C., Rudow, A., D\'iaz-Y\'a\~nez, O.}{Preparing for tomorrow: a protocol for tree species parameterization in dynamic vegetation models. \emph{Ecological Modelling}, 517, 111587, 2026. doi:10.1016/j.ecolmodel.2026.111587}
+\pubitem{3}{\me$^{\dagger\ast}$, Hiltner, U., Knapp, N., Bugmann, H.}{Simulating the recent drought-induced mortality of European beech and Norway spruce in German forests. \emph{Geoscientific Model Development}, 19(3), 1121--1141, 2026. doi:10.5194/gmd-19-1121-2026}
+\pubitem{4}{Boukhris, I., Cherubini, F., Collalti, A., Dalmonech, D., Vonderach, C., \me\ et al.}{Long-term forest-sector mitigation and radiative forcing. \emph{Journal of Environmental Management}, 405, 129586, 2026. doi:10.1016/j.jenvman.2026.129586}
+\pubitem{5}{Boukhris, I., \me$^{\dagger}$, Dalmonech, D., Valentini, R., Collalti, A.}{Modeling forest growth under current and future climate. \emph{Current Forestry Reports}, 11(1), 17, 2025. doi:10.1007/s40725-025-00249-5}
+\pubitem{6}{Fischer, R., Anders, T., Bugmann, H., Djahangard, M., Dressler, G., Hetzer, J., Hickler, T., Hiltner, U., \me\ et al.}{Perspectives for forest modeling to improve the representation of drought-related tree mortality. \emph{Journal f\"ur Kulturpflanzen}, 77(2), 50--69, 2025. doi:10.5073/JfK.2025.02.05}
+\pubitem{7}{\me$^{\dagger}$, Dalmonech, D., Collalti, A.}{Modeling Forest Response to Climate Change (editorial). \emph{Forests}, 15(7), 1194, 2024. doi:10.3390/f15071194}
+\pubitem{8}{Dalmonech, D., Vangi, E., Chiesi, M., Chirici, G., Fibbi, L., Giannetti, F., \me, Massari, C. et al.}{Regional estimates of gross primary production: 3D-CMCC-FEM vs. remote-sensing multiple datasets. \emph{European Journal of Remote Sensing}, 57(1), 2301657, 2024. doi:10.1080/22797254.2023.2301657}
+\pubitem{9}{Terribile, F. et al., incl. \me}{The LANDSUPPORT geospatial decision support system (S-DSS) vision. \emph{Land Degradation \& Development}, 35(2), 813--834, 2024. doi:10.1002/ldr.4954}
+\pubitem{10}{Vangi, E., Dalmonech, D., Cioccolo, E., \me\ et al.}{Stand age diversity affects forests' resilience and stability, although unevenly. \emph{Journal of Environmental Management}, 366, 121822, 2024. doi:10.1016/j.jenvman.2024.121822}
+\pubitem{11}{\me$^{\dagger}$ et al.}{Weshalb sind die Buchen in Mittelland-W\"aldern gestorben? \emph{Schweizerische Zeitschrift f\"ur Forstwesen}, 175(1), 2024.}
+\pubitem{12}{Testolin, R., Dalmonech, D., \me\ et al.}{Simulating diverse forest management options in a changing climate on a \emph{Pinus nigra} subsp. \emph{laricio} plantation in Southern Italy. \emph{Science of the Total Environment}, 857, 159361, 2023. doi:10.1016/j.scitotenv.2022.159361}
+\pubitem{13}{Dalmonech, D., \me$^{\dagger}$, Amthor, J.S., Cescatti, A., Lindner, M., Trotta, C., Collalti, A.}{Feasibility of enhancing carbon sequestration and stock capacity in temperate and boreal European forests via changes to management regimes. \emph{Agricultural and Forest Meteorology}, 327, 109203, 2022. doi:10.1016/j.agrformet.2022.109203}
+\pubitem{14}{Mahnken, M., Cailleret, M., Collalti, A. et al., incl. \me}{Accuracy, realism and general applicability of European forest models. \emph{Global Change Biology}, 28(23), 6921--6943, 2022. doi:10.1111/gcb.16384}
+\pubitem{15}{De Faria, B.L., \me\ et al.}{Model-based estimation of Amazonian forests recovery time after drought and fire events. \emph{Forests}, 12(1), 8, 2021. doi:10.3390/f12010008}
+\pubitem{16}{\me$^{\dagger}$, Collalti, A.}{``Models of tree and stand dynamics'': a differential journey through forest modelling (book review). \emph{iForest}, 13(1), 152--153, 2020. doi:10.3832/ifor0061-013}
+\pubitem{17}{\me$^{\dagger}$, Langella, G., Basile, A., Cona, F. et al.}{A geospatial decision support system tool for supporting integrated forest knowledge at the landscape scale. \emph{Forests}, 10(8), 690, 2019. doi:10.3390/f10080690}
+
+\section*{Publications --- edited volumes \& outreach}
+\pubitem{1}{\me, Dalmonech, D., Collalti, A. (eds.)}{Modeling Forest Response to Climate Change. MDPI \emph{Forests} Special Issue reprint.}
+\pubitem{2}{\me}{Unraveling the death spiral: drivers and ecological responses of temperate forests to drought stress. Doctoral dissertation, ETH Zurich, 2025.}
+\pubitem{3}{\me, Dalmonech, D.}{Aumento di temperatura e sequestro di carbonio: un punto di non ritorno a breve termine per le foreste? SISEF, March 2021.}
+\pubitem{4}{\me, Castello, P.}{Dall'universit\`a alla professione. L'esperienza del progetto PRO.PRO.FOR. \emph{Sherwood --- Foreste ed Alberi Oggi}, 232, 2018.}
+\pubitem{5}{\me, Zambon, G.}{Uniforest. Un'impresa familiare nel grande mercato europeo. \emph{Tecniko \& Pratiko}, 129, 2017.}
+
+\section*{Technical skills}
+\defrow{Programming}{C\# (advanced); C, Python, Java, JavaScript, Rust (basic)}
+\defrow{Scripting \& stats}{R (advanced); SAS, SPSS, Statgraphics Centurion, MATLAB}
+\defrow{Modelling env.}{RStudio, NetLogo, Jupyter Notebook, Google Colab}
+\defrow{Development}{Microsoft Visual Studio, Eclipse; Git (GitHub, GitLab)}
+\defrow{HPC \& cloud}{ETH Euler cluster (SLURM, MPI/OpenMP)}
+\defrow{Geospatial}{QGIS, ArcGIS, Google Earth Engine}
+\defrow{Databases}{PostgreSQL, Microsoft Access}
+\defrow{Authoring}{\LaTeX, Quarto, Markdown, Shiny}
+\defrow{Systems}{Windows, Linux}
+
+\section*{Languages \& personal}
+\defrow{Languages}{Italian (native), English (C1), German (B2), Spanish (B1), French (A2)}
+\defrow{Personal}{Born 15 March 1992 in Naples, Italy. Italian nationality. Based in the Canton of Zurich, Switzerland.}
+
+\end{document}

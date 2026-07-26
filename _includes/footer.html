@@ -1,9 +1,18 @@
-<footer class="footer-main">
-    {% include social-links.html %}
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <strong>{{ site.name }}</strong> &middot; {{ site.role }}<br>
+      <a href="mailto:{{ site.email-work }}">{{ site.email-work }}</a>
+    </div>
 
-    {{ site.name }} © {{ site.time | date: '%Y' }} <a class="link" href="{{ site.url }}/feed.xml" target="_blank"><svg class="icon icon-rss"><use xlink:href="#icon-rss"></use></svg></a>
+    <ul class="footer__links">
+      <li><a href="{{ site.orcid }}" target="_blank" rel="noopener">ORCID</a></li>
+      <li><a href="{{ site.scholar }}" target="_blank" rel="noopener">Scholar</a></li>
+      <li><a href="{{ site.researchgate }}" target="_blank" rel="noopener">ResearchGate</a></li>
+      <li><a href="{{ site.linkedin-url }}" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/{{ site.github }}" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
 
-<!--    <p class="extra">
-        <a class="link" href="https://github.com/sergiokopplin/indigo">Indigo theme</a> by <a class="link" href="https://github.com/sergiokopplin/indigo">Kopplin</a>
-    </p> -->
+    <div class="muted">&copy; {{ site.time | date: '%Y' }}</div>
+  </div>
 </footer>

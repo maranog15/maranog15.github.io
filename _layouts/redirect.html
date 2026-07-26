@@ -1,0 +1,23 @@
+---
+layout:
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting&hellip;</title>
+  <link rel="canonical" href="{{ page.redirect_to | absolute_url }}">
+  <meta name="robots" content="noindex">
+  <meta http-equiv="refresh" content="0; url={{ page.redirect_to | relative_url }}">
+  <script>location.replace("{{ page.redirect_to | relative_url }}");</script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+           margin: 4rem auto; max-width: 34rem; padding: 0 1.25rem; color: #1b211e; line-height: 1.7; }
+    a { color: #2f6b4f; }
+  </style>
+</head>
+<body>
+  <p>This page has moved.</p>
+  <p><a href="{{ page.redirect_to | relative_url }}">Continue to {{ page.redirect_to }}</a></p>
+</body>
+</html>

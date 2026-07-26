@@ -4,59 +4,47 @@ layout:
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    {% if site.analytics-google %}
-        {% include analytics-google.html %}
-    {% endif %}
+    {% if site.analytics-google %}{% include analytics-google.html %}{% endif %}
 
     <meta charset="utf-8">
-    <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
-    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
 
-    <meta name=description content="{{ site.bio }}">
-    <meta name=author content="{{ site.name }}">
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <meta name="author" content="{{ site.name }}">
 
     {% if page.seo_customtitle %}
       {% seo title=false %}
-    <title>{{page.seo_customtitle}}</title>
+      <title>{{ page.seo_customtitle }}</title>
     {% else %}
       {% seo %}
     {% endif %}
 
     {% include favicon.html %}
-    {% include jquery.html %}
-    {% include bigfoot.html %}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
 
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}{{ "/feed.xml" }}" />
 
     <style>
     {% capture scss_sheet %}{% include style.scss %}{% endcapture %}
     {{ scss_sheet | scssify }}
     </style>
-
 </head>
 <body>
+    <a class="skip" href="#main">Skip to content</a>
 
-    <div class="wrapper-{% if site.width == "normal" %}normal{% elsif site.width == "large" %}large{% endif %}">
-        {% if page.tag %}
-            <div class="post">
-        {% else %}
-            {% if showHeader != true %}
-                <div class="page {{ page.title | downcase }}">
-            {% else %}
-                <div class="{{ page.title | downcase }}">
-            {% endif %}
-        {% endif %}
+    {% include nav.html %}
 
-            {{ content }}
-        </div>
-    </div>
+    <main id="main">
+        {{ content }}
+    </main>
 
-    {% include icons.html %}
-    {% include smooth-scroll.html %}
+    {% include footer.html %}
+
     {% include new-window-fix.html %}
-    {% include open-embed.html %}
-    {% include anchors-js.html %}
 </body>
 </html>

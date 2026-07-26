@@ -1,67 +1,18 @@
-<nav class="{% if page.title == "Home" %}nav-home{% else %}nav{% endif %}">
-    <ul class="list">
-        {% if page.title != "Home" %}
-            <li class="item">
-                <a class="link" href="{{ site.url }}/">Home</a>
-            </li>
-        {% endif %}
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      {{ site.name }}
+      <span class="brand__sub">Forest ecology &amp; modelling</span>
+    </a>
 
-        {% if site.about == true %}
-            {% if page.title != "About" %}
-                <li class="item">
-                    <a class="link" href="{{ site.url }}/about">About</a>
-                </li>
-            {% endif %}
-        {% endif %}
-
-        {% if site.blog == true %}
-            {% if page.title != "Blog" %}
-                <li class="item">
-                    <a class="link" href="{{ site.url }}/blog">Blog</a>
-                </li>
-            {% endif %}
-        {% endif %}
-
-        {% if site.research == true %}
-            {% if page.title != "Research" %}
-                <li class="item">
-                    <a class="link" href="{{ site.url }}/research">Research</a>
-                </li>
-            {% endif %}
-        {% endif %}
-
-        {% if site.projects == true %}
-            {% if page.title != "Projects" %}
-                <li class="item">
-                    <a class="link" href="{{ site.url }}/projects">Projects</a>
-                </li>
-            {% endif %}
-        {% endif %}
-
-
-
-        {% if site.resume == true %}
-            {% if page.title != "Résumé" %}
-              <li class="item">
-                  <a class="link" href="{% if site.resume-external %}{{ site.resume-url }}{% else %}{{ site.url }}/{{ site.resume-url }}{% endif %}">Résumé</a>
-              </li>
-            {% endif %}
-        {% endif %}
-
-        {% if site.teaching == true %}
-            {% if page.title != "Teaching" %}
-                <li class="item">
-                    <a class="link" href="{{ site.url }}/teaching">Teaching</a>
-                </li>
-            {% endif %}
-        {% endif %}
-
-        {% if site.presentations == true %}
-            {% if page.title != "Presentations" %}
-                <li class="item">
-                    <a class="link" href="{{ site.url }}/presentations">Presentations</a>
-                </li>
-            {% endif %}
-        {% endif %}
-    </ul>
-</nav>
+    <nav aria-label="Main">
+      <ul class="menu">
+        <li><a href="{{ '/' | relative_url }}" {% if page.nav == "Home" %}aria-current="page"{% endif %}>Home</a></li>
+        <li><a href="{{ '/research/' | relative_url }}" {% if page.nav == "Research" %}aria-current="page"{% endif %}>Research</a></li>
+        <li><a href="{{ '/cv/' | relative_url }}" {% if page.nav == "CV" %}aria-current="page"{% endif %}>CV</a></li>
+        <li><a href="{{ '/publications/' | relative_url }}" {% if page.nav == "Publications" %}aria-current="page"{% endif %}>Publications</a></li>
+        <li><a href="{{ '/teaching/' | relative_url }}" {% if page.nav == "Teaching" %}aria-current="page"{% endif %}>Teaching</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

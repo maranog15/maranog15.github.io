@@ -1,127 +1,72 @@
-# main text of home
+# ---------------------------------------------------------------------------
+#  ginamarano.com
+# ---------------------------------------------------------------------------
+
 name: Gina Marano
-bio: "The perspective and modelling attemps of a young researcher on the impacts of climate extremes on forest ecosystems"
-#ForestEcology #Drought #Modelling #Silviculture 
-
-# twitter summary info
-description: The perspective of a young researcher the impacts of droughts on forest ecosystems and the role of silviculture
-
-# if it's an external image, update below for true
-# better with square images
-external-image: true
-picture: /assets/images/scatle.jpg
-
-# If you want to include your resume, set to true
-# and specify source (external or local).
-resume: true
-resume-external: false
-resume-url: resume
+role: "Forest ecologist &middot; Postdoctoral researcher, WSL"
+title: Gina Marano
+bio: "Forest ecologist and modeller working on drought, disturbance and the dynamics of temperate forests."
+description: "Gina Marano — forest ecologist and postdoctoral researcher at WSL. Process-based forest modelling, drought-induced tree mortality and the dynamics of temperate forests."
 
 url: https://ginamarano.com
-# your url: http://USERNAME.github.io
+baseurl: ""
 
-# Outputting
-permalink: /blog/:year/:month/:day/:title/
-paginate: 20 # amount of posts to show
-paginate_path: /blog/page:num/
-timezone: UTC # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+# ---------------------------------------------------------------------------
+#  identity / portrait
+# ---------------------------------------------------------------------------
+external-image: false
+picture: /assets/images/portrait.jpg
 
-# To enable google analytics, supply your token below
-analytics-google: 'G-5TFWFPPZ43'
+# ---------------------------------------------------------------------------
+#  contact & profiles
+# ---------------------------------------------------------------------------
+email: ginamarano.forest@gmail.com
+email-work: gina.marano@wsl.ch
 
-# To enable piwik tracking, supply your url & site ID below
-# analytics-piwik-url: 'piwik.my-host.com'
-# analytics-piwik-id: 1
-
-# if you don't want comments in your posts, leave categories empty
-disqus:
-  shortname: ginamarano-com # enter this from your disqus account
-  categories: [blog, project] # only show disqus for posts that have these categories
-
-# if you don't have any of social below, comment the line
+orcid: https://orcid.org/0000-0003-2600-984X
+scholar: https://scholar.google.com/citations?user=OOLvF6kAAAAJ&hl=en
+researchgate: https://www.researchgate.net/profile/Gina-Marano
+linkedin-url: https://www.linkedin.com/in/gina-marano-60a66270/
+wsl-profile: https://www.wsl.ch/en/staff/maranogi/
+github: maranog15
 twitter: ginmarano
 instagram: juno_tanne
-# google: mygoogle
-# instagram: myinstagram
-# pinterest: mypinterest
-# linkedin: mylinkedin
-# youtube: myyoutube
-# spotify: myspotify
-github: maranog15
-# lastfm: mylastfm
-# stackoverflow: 7044681/mystackoverflow
-# quora: userquora
-# reddit: username
-# medium: medium
-# vimeo: myvimeo
-# lanyrd: mylanyrd
-email: ginamarano.forest@gmail.com
 
-authors:
-    maranog15:
-        name: Gina Marano
-        bio: "The perspective and modelling attemps of a young researcher on the impacts of climate extremes on forest ecosystems and the role of silviculture"
-        #ForestEcology #Drought #Modelling #Silviculture 
-        external-image: false
-        picture: assets/images/favcon.jpg
-        twitter: ginamarano
+# CV file served from /assets/docs/ (leave blank to hide the download button)
+cv-pdf: /assets/docs/CV_GinaMarano_2026.pdf
 
-# do you want a larger site? change the option below
-# options: [normal, large] | default: normal
-# normal = 560px / large = 810px
-width: large
+# ---------------------------------------------------------------------------
+#  build
+# ---------------------------------------------------------------------------
+timezone: UTC
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  hard_wrap: false
 
-# if you don't need pagination, comment the *paginate* configs below
-# paginate: 5
-# paginate_path: "blog/:num/"
-
-# if you don't need projects, comment the *projects* configs below
-projects: false
-
-# if you don't need "about" or "blog", comment them out below
-about: true
-blog: true
-
-# other pages:
-research: true
-teaching: true
-presentations: true
-resume: true
-
-# do you want to show the "read time" of the posts?
-read-time: true
-
-# do you want to show the "tags" inside the posts?
-show-tags: true
-
-# related posts inside a post?
-related: true
-
-# Display links for next and previous posts for the specified categories
-post-advance-links: [blog]
-
-# show author block at the end of a post ?
-show-author: true
-
-# do you want some animations?
-animation: true
+sass:
+  style: compressed
 
 plugins:
   - jekyll-seo-tag
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-admin
-  - jekyll-paginate
+  - jekyll-sitemap
 
-jekyll-mentions:
-    base_url: https://github.com
-
-# Reading Files
+# ---------------------------------------------------------------------------
+#  files
+# ---------------------------------------------------------------------------
 include:
   - .htaccess
-  - _pages
+
 exclude:
+  # retired blog + legacy Indigo theme files (kept on disk, not published)
+  - _posts
+  - _drafts
+  - projects.html
+  - tags.html
+  - assets/css
+  - classes
+  - assets/screen-shot.png
   - "*.sublime-project"
   - "*.sublime-workspace"
   - vendor
@@ -129,13 +74,11 @@ exclude:
   - .bundle
   - .jekyll-assets-cache
   - .sass-cache
-#  - assets/js/plugins
-#  - assets/js/_main.js
-#  - assets/js/vendor
   - Capfile
   - CHANGELOG
   - config
   - Gemfile
+  - Gemfile.lock
   - Gruntfile.js
   - gulpfile.js
   - LICENSE
@@ -144,13 +87,18 @@ exclude:
   - package.json
   - Rakefile
   - README.*
+  - FAQ.md
+  - travis.sh
+  - .travis.yml
   - tmp
   - TO-DO.*
-  - /docs # ignore Minimal Mistakes /docs
-  - /test # ignore Minimal Mistakes /test
-  - /resources # different files I use for the blog and the web.
+  - /docs
+  - /test
+  - /resources
+
 keep_files:
   - .git
   - .svn
+
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
